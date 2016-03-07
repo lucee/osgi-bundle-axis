@@ -119,9 +119,11 @@
             <Bundle-SymbolicName>org.lucee.axis</Bundle-SymbolicName>
             <Bundle-Description>OSGI version of jar ${project.name}</Bundle-Description>
             <Export-Package>*</Export-Package>
-            <Require-Bundle>org.lucee.wsdl4j;bundle-version=1.5.1,org.lucee.jaxrpc;bundle-version=1.4.0,org.lucee.saaj;bundle-version=1.4.0,org.apache.commons.discovery;bundle-version=0.5,org.apache.commons.net;bundle-version=3.3.0,org.lucee.commons.logging;bundle-version=1.1.1,org.lucee.commons.httpclient;bundle-version=3.1</Require-Bundle>
-            <Import-Package>!org.apache.commons.httpclient,!javax.wsdl.extensions.mime.MIMEContent,!javax.jms</Import-Package>
-            <DynamicImport-Package>org.apache.commons.httpclient,javax.wsdl.extensions.mime.MIMEContent,javax.jms</DynamicImport-Package>
+            <Require-Bundle>org.lucee.wsdl4j;bundle-version=1.5.1,org.lucee.jaxrpc;bundle-version=1.4.0,org.lucee.saaj;bundle-version=1.4.0,org.apache.commons.discovery;bundle-version=0.5,org.apache.commons.net;bundle-version=3.3.0,org.lucee.commons.logging;bundle-version=1.1.1,org.lucee.commons.httpclient;bundle-version=3.1.0</Require-Bundle>
+            <!-- <Require-Bundle-Fragment></Require-Bundle-Fragment> -->
+            <Import-Package>!com.ibm.wsdl.extensions.soap,!org.exolab.castor.xml,!org.omg.CORBA,!org.omg.CosNaming,!sun.awt.image.codec,!sun.security.provider,!javax.rmi,!org.apache.commons.httpclient,!javax.wsdl.extensions.mime.MIMEContent,!javax.jms,!com.sun.jimi.core,!org.apache.bsf,*</Import-Package>
+            <DynamicImport-Package>com.ibm.wsdl.extensions.soap,org.exolab.castor.xml,org.omg.CORBA,org.omg.CosNaming,sun.awt.image.codec,sun.security.provider,javax.rmi,org.apache.commons.httpclient,javax.wsdl.extensions.mime.MIMEContent,javax.jms,com.sun.jimi.core,org.apache.bsf</DynamicImport-Package>
+          <!-- <Fragment-Host></Fragment-Host> -->
           </instructions>
         </configuration>
         <extensions>true</extensions>
