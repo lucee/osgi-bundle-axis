@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.lucee</groupId>
   <artifactId>axis</artifactId>
-  <version>1.4.0.L0002</version>
+  <version>1.4.0.0003L</version>
   <name>Axis</name>
   <packaging>bundle</packaging>
 
@@ -111,91 +111,19 @@
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
-        <version>3.0.1</version>
+        <version>5.1.2</version>
         <configuration>
           <unpackBundle>true</unpackBundle>
           <instructions>
             <Bundle-Name>org.lucee.axis</Bundle-Name>
             <Bundle-SymbolicName>org.lucee.axis</Bundle-SymbolicName>
             <Bundle-Description>OSGI version of jar ${project.name}</Bundle-Description>
-            <Export-Package>*</Export-Package>
-            <Require-Bundle>org.lucee.wsdl4j;bundle-version=1.5.1,org.lucee.jaxrpc;bundle-version=1.4.0,org.lucee.saaj;bundle-version=1.4.0,org.apache.commons.discovery;bundle-version=0.5,org.apache.commons.net;bundle-version=3.3.0,org.lucee.commons.logging;bundle-version=1.1.1.L0001,org.lucee.commons.httpclient;bundle-version=3.1.0</Require-Bundle>
+            <Export-Package>*,META-INF.services.*</Export-Package>
+            <Require-Bundle>org.lucee.wsdl4j;bundle-version=1.5.1.00001L,org.lucee.jaxrpc;bundle-version=1.4.0,org.lucee.saaj;bundle-version=1.4.0,org.apache.commons.discovery;bundle-version=0.5,org.apache.commons.net;bundle-version=3.3.0,org.lucee.commons.logging;bundle-version=1.2.0,org.lucee.commons.httpclient;bundle-version=3.1.0.0001L</Require-Bundle>
             <!-- <Require-Bundle-Fragment></Require-Bundle-Fragment> -->
-            <Import-Package>!org.w3c.dom,!org.xml.sax,!org.xml.sax.helpers,!org.apache.commons.discovery,!org.apache.commons.net.pop3,!org.apache.commons.discovery.resource,!org.apache.commons.discovery.tools,!org.xml.sax.ext,
-              !org.apache.commons.discovery.resource.names,
-              !com.ibm.wsdl.extensions.soap,!org.exolab.castor.xml,!org.omg.CORBA,!org.omg.CosNaming,!sun.awt.image.codec,!sun.security.provider,!javax.rmi,!org.apache.commons.httpclient,!org.apache.commons.httpclient.methods,!javax.wsdl.extensions.mime.MIMEContent,!javax.jms,!com.sun.jimi.core,!org.apache.bsf,!com.sun.net.ssl,!com.sun.net.ssl.internal.ssl,!javax.activ
- ation,!javax.imageio,!javax.imageio.metadata,!javax.imageio.stream,!javax.m
- ail,!javax.mail.internet,!javax.naming,!javax.naming.spi,!javax.net,!javax.n
- et.ssl,!javax.servlet,!javax.servlet.http,!javax.swing,!javax.swing.border,!
- javax.swing.event,!javax.swing.plaf.basic,!javax.swing.table,!javax.swing.
- text,!javax.wsdl,!javax.wsdl.extensions,!javax.wsdl.extensions.http,!javax.
- wsdl.extensions.mime,!javax.wsdl.extensions.soap,!javax.wsdl.factory,!java
- x.wsdl.xml,!javax.xml.namespace,!javax.xml.parsers,!javax.xml.rpc,!javax.xm
- l.rpc.encoding,!javax.xml.rpc.handler,!javax.xml.rpc.handler.soap,!javax.x
- ml.rpc.holders,!javax.xml.rpc.server,!javax.xml.rpc.soap,!javax.xml.soap,!j
- avax.xml.transform,!javax.xml.transform.dom,!javax.xml.transform.sax,!java
- x.xml.transform.stream,!org.apache.axis,!org.apache.axis.attachments,!org.
- apache.axis.client,!org.apache.axis.collections,!org.apache.axis.componen
- ts.compiler,!org.apache.axis.components.encoding,!org.apache.axis.compone
- nts.image,!org.apache.axis.components.jms,!org.apache.axis.components.log
- ger,!org.apache.axis.components.net,!org.apache.axis.components.script,!or
- g.apache.axis.components.threadpool,!org.apache.axis.components.uuid,!org
- .apache.axis.configuration,!org.apache.axis.constants,!org.apache.axis.de
- ployment.wsdd,!org.apache.axis.deployment.wsdd.providers,!org.apache.axis
- .description,!org.apache.axis.encoding,!org.apache.axis.encoding.ser,!org.
- apache.axis.handlers,!org.apache.axis.handlers.soap,!org.apache.axis.i18n
- ,!org.apache.axis.management,!org.apache.axis.management.jmx,!org.apache.a
- xis.message,!org.apache.axis.monitor,!org.apache.axis.providers,!org.apach
- e.axis.providers.java,!org.apache.axis.schema,!org.apache.axis.security,!o
- rg.apache.axis.security.servlet,!org.apache.axis.security.simple,!org.apa
- che.axis.server,!org.apache.axis.session,!org.apache.axis.soap,!org.apache
- .axis.strategies,!org.apache.axis.transport.http,!org.apache.axis.transpo
- rt.java,!org.apache.axis.transport.jms,!org.apache.axis.transport.local,!o
- rg.apache.axis.types,!org.apache.axis.utils,!org.apache.axis.utils.byteco
- de,!org.apache.axis.utils.cache,!org.apache.axis.wsdl,!org.apache.axis.wsd
- l.fromJava,!org.apache.axis.wsdl.gen,!org.apache.axis.wsdl.symbolTable,!or
- g.apache.axis.wsdl.toJava,!org.apache.commons.discovery.resource.classes
- ,!org.apache.commons.httpclient.auth,!org.apache.commons.httpclient.param
- s,!org.apache.commons.httpclient.protocol,!org.apache.commons.logging,!org
- .apache.commons.net.smtp,*</Import-Package>
-            <DynamicImport-Package>org.w3c.dom,org.xml.sax,org.xml.sax.helpers,org.apache.commons.discovery,org.apache.commons.net.pop3,org.apache.commons.discovery.resource,org.apache.commons.discovery.tools,org.xml.sax.ext,org.apache.commons.logging,org.apache.commons.discovery.resource.names,com.ibm.wsdl.extensions.soap,org.exolab.castor.xml,org.omg.CORBA,org.omg.CosNaming,sun.awt.image.codec,sun.security.provider,javax.rmi,org.apache.commons.httpclient,org.apache.commons.httpclient.methods,javax.wsdl.extensions.mime.MIMEContent,javax.jms,com.sun.jimi.core,org.apache.bsf,com.sun.net.ssl,com.sun.net.ssl.internal.ssl,javax.activ
- ation,javax.imageio,javax.imageio.metadata,javax.imageio.stream,javax.m
- ail,javax.mail.internet,javax.naming,javax.naming.spi,javax.net,javax.n
- et.ssl,javax.servlet,javax.servlet.http,javax.swing,javax.swing.border,
- javax.swing.event,javax.swing.plaf.basic,javax.swing.table,javax.swing.
- text,javax.wsdl,javax.wsdl.extensions,javax.wsdl.extensions.http,javax.
- wsdl.extensions.mime,javax.wsdl.extensions.soap,javax.wsdl.factory,java
- x.wsdl.xml,javax.xml.namespace,javax.xml.parsers,javax.xml.rpc,javax.xm
- l.rpc.encoding,javax.xml.rpc.handler,javax.xml.rpc.handler.soap,javax.x
- ml.rpc.holders,javax.xml.rpc.server,javax.xml.rpc.soap,javax.xml.soap,j
- avax.xml.transform,javax.xml.transform.dom,javax.xml.transform.sax,java
- x.xml.transform.stream,org.apache.axis,org.apache.axis.attachments,org.
- apache.axis.client,org.apache.axis.collections,org.apache.axis.componen
- ts.compiler,org.apache.axis.components.encoding,org.apache.axis.compone
- nts.image,org.apache.axis.components.jms,org.apache.axis.components.log
- ger,org.apache.axis.components.net,org.apache.axis.components.script,or
- g.apache.axis.components.threadpool,org.apache.axis.components.uuid,org
- .apache.axis.configuration,org.apache.axis.constants,org.apache.axis.de
- ployment.wsdd,org.apache.axis.deployment.wsdd.providers,org.apache.axis
- .description,org.apache.axis.encoding,org.apache.axis.encoding.ser,org.
- apache.axis.handlers,org.apache.axis.handlers.soap,org.apache.axis.i18n
- ,org.apache.axis.management,org.apache.axis.management.jmx,org.apache.a
- xis.message,org.apache.axis.monitor,org.apache.axis.providers,org.apach
- e.axis.providers.java,org.apache.axis.schema,org.apache.axis.security,o
- rg.apache.axis.security.servlet,org.apache.axis.security.simple,org.apa
- che.axis.server,org.apache.axis.session,org.apache.axis.soap,org.apache
- .axis.strategies,org.apache.axis.transport.http,org.apache.axis.transpo
- rt.java,org.apache.axis.transport.jms,org.apache.axis.transport.local,o
- rg.apache.axis.types,org.apache.axis.utils,org.apache.axis.utils.byteco
- de,org.apache.axis.utils.cache,org.apache.axis.wsdl,org.apache.axis.wsd
- l.fromJava,org.apache.axis.wsdl.gen,org.apache.axis.wsdl.symbolTable,or
- g.apache.axis.wsdl.toJava,org.apache.commons.discovery.resource.classes
- ,org.apache.commons.httpclient.auth,org.apache.commons.httpclient.param
- s,org.apache.commons.httpclient.protocol,org
- .apache.commons.net.smtp</DynamicImport-Package>
-
-
-          <!-- <Fragment-Host></Fragment-Host> -->
+            <Import-Package>!com.ibm.wsdl.extensions.soap,!org.exolab.castor.xml,!org.omg.CORBA,!org.omg.CosNaming,!sun.awt.image.codec,!sun.security.provider,!javax.rmi,!org.apache.commons.httpclient,!javax.wsdl.extensions.mime.MIMEContent,!javax.jms,!com.sun.jimi.core,!org.apache.bsf,!org.apache.log4j,!org.apache.commons.modeler,!org.apache.commons.net.pop3,!org.apache.commons.net.smtp,*</Import-Package>
+            <DynamicImport-Package>com.ibm.wsdl.extensions.soap,org.exolab.castor.xml,org.omg.CORBA,org.omg.CosNaming,sun.awt.image.codec,sun.security.provider,javax.rmi,org.apache.commons.httpclient,javax.wsdl.extensions.mime.MIMEContent,javax.jms,com.sun.jimi.core,org.apache.bsf,org.apache.log4j,org.apache.commons.modeler,org.apache.commons.net.pop3,org.apache.commons.net.smtp</DynamicImport-Package>
+            <!-- <Fragment-Host></Fragment-Host> -->
           </instructions>
         </configuration>
         <extensions>true</extensions>
